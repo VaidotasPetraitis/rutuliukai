@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MWUyypuHYPv2UfXBJChvNb46VdtNcz5etYTiDaF1pqw=",
+  "Source": "decoded-web-server",
+  "BasePath": "_content/decoded-web-server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
