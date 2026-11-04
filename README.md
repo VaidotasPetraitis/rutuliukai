@@ -21,7 +21,7 @@ python -m http.server 5501 --bind 127.0.0.1
 
 Open [the local game](http://127.0.0.1:5501/). When the loading screen says **READY**, click anywhere or press a key to open the menu and enable audio.
 
-The game uses HTML, CSS, JavaScript, and JSON. Edit the files in `data/` to change gameplay settings or the shop and upgrade catalog. For GitHub Pages, choose **Deploy from a branch** under **Settings → Pages**, then select `main` and `/ (root)`.
+The game uses HTML, CSS, JavaScript, and JSON. Edit the files in `data/` to change gameplay settings or the shop and upgrade catalog.
 
 <details>
 <summary>More screenshots</summary>
