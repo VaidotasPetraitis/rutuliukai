@@ -20,7 +20,9 @@ export class AudioManager {
         try {
             await AudioManager.ctx.resume();
             audioUnlock.abort();
-        } catch {}
+        } catch (error) {
+            console.warn("Could not resume game audio", error);
+        }
     }
 
     static playAudio(audioBuffer, loop = false) {

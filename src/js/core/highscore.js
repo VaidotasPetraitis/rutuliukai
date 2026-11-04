@@ -8,8 +8,8 @@ export class Highscore {
             if (Number.isSafeInteger(stored) && stored > Highscore.#best) {
                 Highscore.#best = stored;
             }
-        } catch {
-            // Keep the current session's record when browser storage is unavailable.
+        } catch (error) {
+            console.warn("Could not read the saved high score", error);
         }
         return Highscore.#best;
     }
@@ -21,8 +21,8 @@ export class Highscore {
         Highscore.#best = score;
         try {
             localStorage.setItem(Highscore.#storageKey, String(score));
-        } catch {
-            // The record is still available for the current session.
+        } catch (error) {
+            console.warn("Could not save the high score to browser storage", error);
         }
     }
 }

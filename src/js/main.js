@@ -4,7 +4,7 @@ class GameStartup {
             const [{ Application }] = await Promise.all([
                 import("./app.js"),
                 this.#preloadImages(),
-                document.fonts.load('2rem "Jersey 10"').catch(() => {}),
+                document.fonts.ready,
             ]);
             await this.#waitToContinue();
             const app = new Application();
