@@ -242,8 +242,8 @@ body {
 
 #skill-container {
     position: absolute;
-    width: 22%;
-    height: 12%;
+    width: 20%;
+    height: 10.5%;
     left: 50%;
     bottom: 1%;
     border-radius: 10px;
@@ -259,13 +259,19 @@ body {
     width: 30%;
     height: 95%;
     border-radius: 10px;
-    border: 1px solid rgba(192, 192, 192, 0.8);
+    border: 1px solid rgba(192, 192, 192, 0.2);
     color: rgb(255, 255, 255);
     background-color:rgba(0, 0, 0, 0.3);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.skill-card.is-selected {
+    outline: 2px solid #38c6b1;
+    outline-offset: 2px;
+    scale: 1.05;
 }
 
 .skill-card p {

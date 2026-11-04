@@ -60,7 +60,7 @@ export class SkillBar {
                 }
                 const color = this.rarity[skills[selected_card_index].rarity].color;
                 card.style.backgroundColor = `rgba(${color}, 0.3)`;
-                card.style.borderColor = `rgba(${color}, 0.8)`;
+                card.style.borderColor = `rgba(${color}, 0.45)`;
             };
         });
     };

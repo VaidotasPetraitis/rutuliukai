@@ -250,14 +250,12 @@ function handle_skill_click(div, shop_instance) {
 };
 
 function select_skill(div, shop_instance){
-    div.style.scale = "1.05";
-    div.style.borderWidth = "5px";
+    div.classList.add("is-selected");
     shop_instance.skill_selected = div_id(div, 1);
 };
 
 function deselect_skill(div, shop_instance){
-    div.style.scale = "1.00";
-    div.style.borderWidth = "1px";
+    div.classList.remove("is-selected");
     shop_instance.skill_selected = null;
 };
 
