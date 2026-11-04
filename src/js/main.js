@@ -1,12 +1,14 @@
 class GameStartup {
     static async start() {
         try {
-            const [{ Application }] = await Promise.all([
+            const [{ Application }, { AudioManager }] = await Promise.all([
                 import("./app.js"),
+                import("./core/audio.js"),
                 this.#preloadImages(),
                 document.fonts.ready,
             ]);
             await this.#waitToContinue();
+            AudioManager.startPlayback();
             const app = new Application();
             requestAnimationFrame(timestamp => {
                 app.animate(timestamp);
@@ -46,7 +48,7 @@ class GameStartup {
         return new Promise(resolve => {
             const input = new AbortController();
             const proceed = event => {
-                if (event.repeat) {
+                if (event.repeat || navigator.userActivation?.isActive === false) {
                     return;
                 }
                 event.preventDefault();

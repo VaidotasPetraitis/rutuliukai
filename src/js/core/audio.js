@@ -8,21 +8,17 @@ export const AUDIO_SETTINGS = {
     rate: 1
 }
 
-const audioUnlock = new AbortController();
-
 export class AudioManager {
-    static ctx = new AudioContext();
-    static gainNode = AudioManager.ctx.createGain();
+    static ctx;
+    static gainNode;
 
     static activeSources = new Set();
 
-    static async resume() {
-        try {
-            await AudioManager.ctx.resume();
-            audioUnlock.abort();
-        } catch (error) {
-            console.warn("Could not resume game audio", error);
-        }
+    static startPlayback() {
+        AudioManager.ctx = new AudioContext();
+        AudioManager.gainNode = AudioManager.ctx.createGain();
+        AudioManager.gainNode.connect(AudioManager.ctx.destination);
+        AudioManager.ctx.resume().catch(error => console.warn("Could not resume game audio", error));
     }
 
     static playAudio(audioBuffer, loop = false) {
@@ -34,7 +30,6 @@ export class AudioManager {
         AudioManager.gainNode.gain.value = AUDIO_SETTINGS.volume;
 
         source.connect(AudioManager.gainNode);
-        AudioManager.gainNode.connect(AudioManager.ctx.destination);
 
         source.start();
 
@@ -70,36 +65,23 @@ export class AudioManager {
     }
 }
 
-if (AudioManager.ctx.state === "suspended") {
-    const options = { capture: true, signal: audioUnlock.signal };
-    document.addEventListener("click", AudioManager.resume, options);
-    document.addEventListener("keydown", AudioManager.resume, options);
-}
+const decoder = new OfflineAudioContext(1, 1, 44100);
+const [menuBackground, shopOpen, monsterHit, arenaBackground] = await Promise.all([
+    loadAudioBuffer("menu_background.mp3"),
+    loadAudioBuffer("menu_shop_open.wav"),
+    loadAudioBuffer("arena_monster_hit.wav"),
+    loadAudioBuffer("arena_background.mp3"),
+]);
 
 export const AUDIO_PRELOADED = {
-    [AUDIO_TYPE.Town]: await AudioFactory(AUDIO_TYPE.Town),
-    [AUDIO_TYPE.Arena]: await AudioFactory(AUDIO_TYPE.Arena)
-}
+    [AUDIO_TYPE.Town]: { background: menuBackground, shop_open: shopOpen },
+    [AUDIO_TYPE.Arena]: { monster_hit: monsterHit, background: arenaBackground },
+};
 
-async function AudioFactory(audioType) {
-    switch (audioType) {
-        case AUDIO_TYPE.Town:
-            return {
-                background: await loadAudioBuffer(AudioManager.ctx, "./asset/audio/menu_background.wav"),
-                shop_open: await loadAudioBuffer(AudioManager.ctx, "./asset/audio/menu_shop_open.wav")
-            };
-        case AUDIO_TYPE.Arena:
-            return {
-                monster_hit: await loadAudioBuffer(AudioManager.ctx, "./asset/audio/arena_monster_hit.wav"),
-                background: await loadAudioBuffer(AudioManager.ctx, "./asset/audio/arena_background.wav")
-            };
-        default:
-            throw new Error("Invalid audio type");
+async function loadAudioBuffer(file) {
+    const response = await fetch(new URL(`../../../asset/audio/${file}`, import.meta.url));
+    if (!response.ok) {
+        throw new Error(`Could not load ${file}: HTTP ${response.status}`);
     }
-}
-
-async function loadAudioBuffer(ctx, url) {
-    const response = await fetch(url)
-    const arrayBuffer = await response.arrayBuffer();
-    return await ctx.decodeAudioData(arrayBuffer);
+    return decoder.decodeAudioData(await response.arrayBuffer());
 }
