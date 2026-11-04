@@ -1,0 +1,185 @@
+{
+  "player": {
+    "color": {
+      "body": "RGBA(255,255,255,0.8)",
+      "trail": "RGBA(255,255,255,0.4)"
+    },
+    "dimension": {
+      "width": 10,
+      "height": 10
+    },
+    "trail": {
+      "len": 15,
+      "from": 0,
+      "to": 1
+    },
+    "sheet_data": {
+      "damage": 1,
+      "projectiles": 0,
+      "hp": 100,
+      "area": 1,
+      "movement_speed": 2,
+      "weapon_speed": 1,
+      "cooldown": 1
+    }
+  },
+  "enemies": {
+    "swarm": {
+      "color": {
+        "body": "RGBA(254,242,0,0.6)",
+        "trail": "0,0,0,0"
+      },
+      "dimension": {
+        "width": 15,
+        "height": 15
+      },
+      "sheet_data": {
+        "damage": 2,
+        "projectiles": 0,
+        "hp": 8,
+        "area": 1,
+        "movement_speed": 2,
+        "weapon_speed": 1,
+        "cooldown": 1
+      },
+      "on_death": {
+        "exp": 3,
+        "gold_min": 0,
+        "gold_max": 2
+      },
+      "strategy": {
+        "movement_pattern": "Line",
+        "shoot": false,
+        "teleport": false
+      }
+    },
+    "archer": {
+      "color": {
+        "body": "RGBA(0,124,127,0.8)",
+        "trail": "RGBA(0,0,0,0)"
+      },
+      "dimension": {
+        "width": 15,
+        "height": 15
+      },
+      "sheet_data": {
+        "damage": 1,
+        "projectiles": 0,
+        "hp": 4,
+        "area": 1,
+        "movement_speed": 0.1,
+        "weapon_speed": 1,
+        "cooldown": 1
+      },
+      "on_death": {
+        "exp": 4,
+        "gold_min": 0,
+        "gold_max": 2
+      },
+      "strategy": {
+        "movement_pattern": "Line",
+        "shoot": true,
+        "teleport": false
+      }
+    },
+    "jumper": {
+      "color": {
+        "body": "RGBA(255,0,128,0.6)",
+        "trail": "0,0,0,0"
+      },
+      "dimension": {
+        "width": 15,
+        "height": 15
+      },
+      "sheet_data": {
+        "damage": 1,
+        "projectiles": 0,
+        "hp": 12,
+        "area": 1,
+        "movement_speed": 0.8,
+        "weapon_speed": 1,
+        "cooldown": 1
+      },
+      "on_death": {
+        "exp": 3,
+        "gold_min": 0,
+        "gold_max": 2
+      },
+      "strategy": {
+        "movement_pattern": "Jiggly",
+        "shoot": false,
+        "teleport": true
+      }
+    }
+  },
+  "weapons": {
+    "spiral": {
+      "type": "Spiral",
+      "sheet": {
+        "attack_rate": 1000,
+        "trail_length": 8,
+        "bounce": 0,
+        "orbit": 0,
+        "damage": 3,
+        "area": 5,
+        "weapon_speed": 0.07,
+        "projectiles": 1
+      },
+      "color": {
+        "body": "RGBA(34,170,84,1)",
+        "trail": "RGBA(34,170,84,0.5)"
+      }
+    },
+    "wave": {
+      "type": "Wave",
+      "sheet": {
+        "attack_rate": 1000,
+        "trail_length": 10,
+        "bounce": 0,
+        "orbit": 0,
+        "damage": 4,
+        "area": 15,
+        "weapon_speed": 3,
+        "projectiles": 1
+      },
+      "color": {
+        "body": "RGBA(255,90,8,0.8)",
+        "trail": "RGBA(255,90,8,0.5)"
+      }
+    },
+    "ricochet": {
+      "type": "Ricochet",
+      "sheet": {
+        "attack_rate": 1000,
+        "trail_length": 30,
+        "bounce": 10,
+        "orbit": 0,
+        "damage": 4,
+        "area": 8,
+        "weapon_speed": 3,
+        "projectiles": 1
+      },
+      "color": {
+        "body": "RGBA(23,111,193,1)",
+        "trail": "RGBA(23,111,193,0.5)"
+      }
+    },
+    "ray": {
+      "type": "",
+      "sheet": {
+        "attack_rate": 1000,
+        "trail_length": 5,
+        "bounce": 0,
+        "orbit": 0,
+        "damage": 5,
+        "area": 4,
+        "weapon_speed": 6,
+        "projectiles": 1
+      },
+      "color": {
+        "body": "RGBA(0,124,127,0.8)",
+        "trail": "RGBA(0,124,127,0.5)"
+      }
+    }
+  }
+}

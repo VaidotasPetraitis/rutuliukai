@@ -1,0 +1,773 @@
+{
+  "ability/db/shop": [
+    {
+      "img": "./asset/img/teleport2.png",
+      "name": "Teleport",
+      "rarity": "epic",
+      "value": 300,
+      "cooldown": 8000,
+      "effect": 0
+    },
+    {
+      "img": "./asset/img/teleport2.png",
+      "name": "Teleport",
+      "rarity": "magic",
+      "value": 200,
+      "cooldown": 10000,
+      "effect": 0
+    },
+    {
+      "img": "./asset/img/teleport2.png",
+      "name": "Teleport",
+      "rarity": "common",
+      "value": 100,
+      "cooldown": 15000,
+      "effect": 0
+    },
+    {
+      "img": "./asset/img/run2.png",
+      "name": "Run",
+      "rarity": "epic",
+      "value": 3,
+      "cooldown": 4000,
+      "effect": 2000
+    },
+    {
+      "img": "./asset/img/run2.png",
+      "name": "Run",
+      "rarity": "magic",
+      "value": 2,
+      "cooldown": 5000,
+      "effect": 1500
+    },
+    {
+      "img": "./asset/img/run2.png",
+      "name": "Run",
+      "rarity": "common",
+      "value": 1,
+      "cooldown": 6000,
+      "effect": 1000
+    },
+    {
+      "img": "./asset/img/heal2.png",
+      "name": "Heal",
+      "rarity": "epic",
+      "value": 80,
+      "cooldown": 16000,
+      "effect": 0
+    },
+    {
+      "img": "./asset/img/heal2.png",
+      "name": "Heal",
+      "rarity": "magic",
+      "value": 60,
+      "cooldown": 20000,
+      "effect": 0
+    },
+    {
+      "img": "./asset/img/heal2.png",
+      "name": "Heal",
+      "rarity": "common",
+      "value": 40,
+      "cooldown": 30000,
+      "effect": 0
+    }
+  ],
+  "upgrade/db/basic": [
+    {
+      "name": "Orbit",
+      "modifier": "WeaponSpeed",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Bullets fly faster, turning your weapons into lightning-fast instruments of destruction.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 1
+    },
+    {
+      "name": "Eyes",
+      "modifier": "Projectiles",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 2,
+      "description": "Unleash a storm of bullets, overwhelming enemies with relentless firepower.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 2
+    },
+    {
+      "name": "Murder",
+      "modifier": "Damage",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Deal devastating damage, turning each shot into a lethal blow.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 3
+    },
+    {
+      "name": "Rewind",
+      "modifier": "Cooldown",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Fire faster than ever, overwhelming foes with a relentless barrage.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 4
+    },
+    {
+      "name": "Bolt",
+      "modifier": "MovementSpeed",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 3,
+      "description": "Move with lightning speed, outmaneuvering and outpacing your enemies.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 5
+    },
+    {
+      "name": "Size",
+      "modifier": "Area",
+      "modifier_type": "Additive",
+      "type": "Player",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Expand your attack range, crushing enemies beneath a wave of destruction.",
+      "img": "./asset/img/player-logo2.png",
+      "id": 6
+    },
+    {
+      "name": "Earthquake",
+      "modifier": "Projectiles",
+      "modifier_type": "Additive",
+      "type": "Wave",
+      "lv": 0,
+      "lv_max": 2,
+      "description": "Unleash a barrage of projectiles, turning each wave into a devastating storm.",
+      "img": "./asset/img/wave-logo2.png",
+      "id": 7
+    },
+    {
+      "name": "Grit",
+      "modifier": "AttackRate",
+      "modifier_type": "Additive",
+      "type": "Wave",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Increase your attack speed, overwhelming enemies with sheer firepower.",
+      "img": "./asset/img/wave-logo2.png",
+      "id": 8
+    },
+    {
+      "name": "Colossal",
+      "modifier": "Area",
+      "modifier_type": "Additive",
+      "type": "Wave",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Crush foes with massive area damage, dominating the battlefield.",
+      "img": "./asset/img/wave-logo2.png",
+      "id": 9
+    },
+    {
+      "name": "Hourglass",
+      "modifier": "AttackRate",
+      "modifier_type": "Additive",
+      "type": "Ricochet",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Increase your ricochet speed, turning each shot into a whirlwind of destruction.",
+      "img": "./asset/img/reco-logo2.png",
+      "id": 10
+    },
+    {
+      "name": "Rampage",
+      "modifier": "Bounce",
+      "modifier_type": "Additive",
+      "type": "Ricochet",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Bounce from enemy to enemy, leaving a trail of devastation in your wake.",
+      "img": "./asset/img/reco-logo2.png",
+      "id": 11
+    },
+    {
+      "name": "Relentless",
+      "modifier": "WeaponSpeed",
+      "modifier_type": "Additive",
+      "type": "Ricochet",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Shoot faster than ever, turning each ricochet into an unstoppable missile.",
+      "img": "./asset/img/reco-logo2.png",
+      "id": 12
+    },
+    {
+      "name": "Alien",
+      "modifier": "Projectiles",
+      "modifier_type": "Additive",
+      "type": "Spiral",
+      "lv": 0,
+      "lv_max": 2,
+      "description": "Launch a barrage of projectiles, turning each spiral into a cosmic storm.",
+      "img": "./asset/img/spiral-logo2.png",
+      "id": 13
+    },
+    {
+      "name": "Universe",
+      "modifier": "Orbit,Projectiles",
+      "modifier_type": "Additive",
+      "type": "Spiral",
+      "lv": 0,
+      "lv_max": 5,
+      "description": "Command cosmic forces, increasing your spiral range and adding more projectiles to your arsenal.",
+      "img": "./asset/img/spiral-logo2.png",
+      "id": 14
+    }
+  ],
+  "upgrade/db/legendary": [
+    {
+      "name": "Lightning",
+      "modifier": "Bounce,WeaponSpeed",
+      "modifier_type": "Additive",
+      "type": "Ricochet",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Harness the power of lightning, increasing bounce count and weapon speed to electrify the battlefield.",
+      "img": "./asset/img/reco-logo2.png",
+      "id": 41
+    },
+    {
+      "name": "Fool",
+      "modifier": "Area,WeaponSpeed",
+      "modifier_type": "Additive",
+      "type": "Spiral",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Embrace the unpredictable with Fool, expanding attack range while sacrificing bullet speed, creating chaotic patterns to confound your foes.",
+      "img": "./asset/img/spiral-logo2.png",
+      "id": 42
+    },
+    {
+      "name": "Rain",
+      "modifier": "Area,Projectiles",
+      "modifier_type": "Additive",
+      "type": "Wave",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Summon a torrential downpour of destruction with Rain, reducing bullet size while unleashing a deluge of smaller but deadlier projectiles.",
+      "img": "./asset/img/wave-logo2.png",
+      "id": 43
+    }
+  ],
+  "upgrade/db/weapon": [
+    {
+      "name": "Wave",
+      "modifier": "NewWeapon",
+      "type": "Weapon",
+      "weapon": "Wave",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Unleash the Wave, a devastating weapon that pierces through enemies in a straight line, leaving destruction in its wake.",
+      "img": "./asset/img/weapon-logo2.png",
+      "id": 31
+    },
+    {
+      "name": "Ricochet",
+      "modifier": "NewWeapon",
+      "type": "Weapon",
+      "weapon": "Ricochet",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Harness the power of Ricochet, a versatile weapon that bounces between enemies, delivering death from unexpected angles.",
+      "img": "./asset/img/weapon-logo2.png",
+      "id": 32
+    },
+    {
+      "name": "Spiral",
+      "modifier": "NewWeapon",
+      "type": "Weapon",
+      "weapon": "Spiral",
+      "lv": 0,
+      "lv_max": 1,
+      "description": "Master the Spiral, a dynamic weapon that spins around the player, shredding enemies with its relentless onslaught.",
+      "img": "./asset/img/spiral-logo2.png",
+      "id": 33
+    }
+  ],
+  "upgrade/db/tier": {
+    "1": [
+      {
+        "rarity": "epic",
+        "value": 0.1
+      },
+      {
+        "rarity": "magic",
+        "value": 0.08
+      },
+      {
+        "rarity": "common",
+        "value": 0.06
+      }
+    ],
+    "2": [
+      {
+        "rarity": "epic",
+        "value": 2
+      },
+      {
+        "rarity": "magic",
+        "value": 1
+      }
+    ],
+    "3": [
+      {
+        "rarity": "epic",
+        "value": 0.1
+      },
+      {
+        "rarity": "magic",
+        "value": 0.08
+      },
+      {
+        "rarity": "common",
+        "value": 0.06
+      }
+    ],
+    "4": [
+      {
+        "rarity": "epic",
+        "value": -0.1
+      },
+      {
+        "rarity": "magic",
+        "value": -0.08
+      },
+      {
+        "rarity": "common",
+        "value": -0.04
+      }
+    ],
+    "5": [
+      {
+        "rarity": "epic",
+        "value": 1.5
+      },
+      {
+        "rarity": "magic",
+        "value": 0.8
+      }
+    ],
+    "6": [
+      {
+        "rarity": "epic",
+        "value": 0.25
+      },
+      {
+        "rarity": "magic",
+        "value": 0.18
+      },
+      {
+        "rarity": "common",
+        "value": 0.12
+      }
+    ],
+    "7": [
+      {
+        "rarity": "epic",
+        "value": 2
+      },
+      {
+        "rarity": "magic",
+        "value": 1
+      }
+    ],
+    "8": [
+      {
+        "rarity": "epic",
+        "value": -100
+      },
+      {
+        "rarity": "magic",
+        "value": -80
+      },
+      {
+        "rarity": "common",
+        "value": -60
+      }
+    ],
+    "9": [
+      {
+        "rarity": "epic",
+        "value": 5
+      },
+      {
+        "rarity": "magic",
+        "value": 4
+      },
+      {
+        "rarity": "common",
+        "value": 3
+      }
+    ],
+    "10": [
+      {
+        "rarity": "epic",
+        "value": -100
+      },
+      {
+        "rarity": "magic",
+        "value": -80
+      },
+      {
+        "rarity": "common",
+        "value": -60
+      }
+    ],
+    "11": [
+      {
+        "rarity": "epic",
+        "value": 4
+      },
+      {
+        "rarity": "magic",
+        "value": 3
+      },
+      {
+        "rarity": "common",
+        "value": 2
+      }
+    ],
+    "12": [
+      {
+        "rarity": "epic",
+        "value": 2.5
+      },
+      {
+        "rarity": "magic",
+        "value": 1.8
+      },
+      {
+        "rarity": "common",
+        "value": 1.2
+      }
+    ],
+    "13": [
+      {
+        "rarity": "epic",
+        "value": 3
+      },
+      {
+        "rarity": "magic",
+        "value": 2
+      },
+      {
+        "rarity": "common",
+        "value": 1
+      }
+    ],
+    "14": [
+      {
+        "rarity": "epic",
+        "value": [
+          8,
+          3
+        ]
+      },
+      {
+        "rarity": "magic",
+        "value": [
+          7,
+          2
+        ]
+      },
+      {
+        "rarity": "common",
+        "value": [
+          6,
+          1
+        ]
+      }
+    ],
+    "41": [
+      {
+        "rarity": "legendary",
+        "value": [
+          30,
+          3
+        ]
+      }
+    ],
+    "42": [
+      {
+        "rarity": "legendary",
+        "value": [
+          20,
+          -0.05
+        ]
+      }
+    ],
+    "43": [
+      {
+        "rarity": "legendary",
+        "value": [
+          -14,
+          10
+        ]
+      }
+    ],
+    "31": [
+      {
+        "rarity": "unique",
+        "value": 0
+      }
+    ],
+    "32": [
+      {
+        "rarity": "unique",
+        "value": 0
+      }
+    ],
+    "33": [
+      {
+        "rarity": "unique",
+        "value": 0
+      }
+    ]
+  },
+  "html/db/upgrade": {
+    "1": {
+      "len": 1,
+      "text": "Weapon Speed",
+      "operator": "+",
+      "sign": "%",
+      "factor": 100,
+      "color": "#00C800"
+    },
+    "2": {
+      "len": 1,
+      "text": "Projectiles",
+      "operator": "+",
+      "sign": "",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "3": {
+      "len": 1,
+      "text": "Damage",
+      "operator": "+",
+      "sign": "%",
+      "factor": 100,
+      "color": "#00C800"
+    },
+    "4": {
+      "len": 1,
+      "text": "Cooldown",
+      "operator": "",
+      "sign": "%",
+      "factor": 100,
+      "color": "#00C800"
+    },
+    "5": {
+      "len": 1,
+      "text": "Movement Speed",
+      "operator": "+",
+      "sign": "m/s",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "6": {
+      "len": 1,
+      "text": "Area",
+      "operator": "+",
+      "sign": "%",
+      "factor": 100,
+      "color": "#00C800"
+    },
+    "7": {
+      "len": 1,
+      "text": "Projectiles",
+      "operator": "+",
+      "sign": "",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "8": {
+      "len": 1,
+      "text": "Attack Rate",
+      "operator": "",
+      "sign": "ms",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "9": {
+      "len": 1,
+      "text": "Area",
+      "operator": "+",
+      "sign": "m",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "10": {
+      "len": 1,
+      "text": "Attack Rate",
+      "operator": "",
+      "sign": "ms",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "11": {
+      "len": 1,
+      "text": "Bounce",
+      "operator": "+",
+      "sign": "",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "12": {
+      "len": 1,
+      "text": "Weapon Speed",
+      "operator": "+",
+      "sign": "m/s",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "13": {
+      "len": 1,
+      "text": "Projectiles",
+      "operator": "+",
+      "sign": "",
+      "factor": 1,
+      "color": "#00C800"
+    },
+    "14": {
+      "len": 2,
+      "text": [
+        "Orbit",
+        "Weapon Speed"
+      ],
+      "operator": [
+        "+",
+        "+"
+      ],
+      "sign": [
+        "m",
+        ""
+      ],
+      "factor": [
+        1,
+        1
+      ],
+      "color": [
+        "#00C800",
+        " #00C800"
+      ]
+    },
+    "31": {
+      "len": 0,
+      "text": "",
+      "operator": "",
+      "sign": "",
+      "factor": [
+        0,
+        0
+      ],
+      "color": ""
+    },
+    "32": {
+      "len": 0,
+      "text": "",
+      "operator": "",
+      "sign": "",
+      "factor": [
+        0,
+        0
+      ],
+      "color": ""
+    },
+    "33": {
+      "len": 0,
+      "text": "",
+      "operator": "",
+      "sign": "",
+      "factor": [
+        0,
+        0
+      ],
+      "color": ""
+    },
+    "41": {
+      "len": 2,
+      "text": [
+        "Bounce",
+        "Weapon Speed"
+      ],
+      "operator": [
+        "+",
+        "+"
+      ],
+      "sign": [
+        " ",
+        "m/s"
+      ],
+      "factor": [
+        1,
+        1
+      ],
+      "color": [
+        "#00C800",
+        " #00C800 "
+      ]
+    },
+    "42": {
+      "len": 2,
+      "text": [
+        "Area",
+        "Weapon Speed"
+      ],
+      "operator": [
+        "+",
+        ""
+      ],
+      "sign": [
+        "m",
+        "m/s"
+      ],
+      "factor": [
+        1,
+        100
+      ],
+      "color": [
+        "#00C800",
+        " #C80000 "
+      ]
+    },
+    "43": {
+      "len": 2,
+      "text": [
+        "Area",
+        "Projectiles"
+      ],
+      "operator": [
+        "",
+        "+"
+      ],
+      "sign": [
+        "m",
+        ""
+      ],
+      "factor": [
+        1,
+        1
+      ],
+      "color": [
+        "#C80000",
+        " #00C800 "
+      ]
+    }
+  }
+}

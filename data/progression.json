@@ -1,0 +1,58 @@
+{
+  "settings": {
+    "current": 1,
+    "exp_required": 5,
+    "exp_current": 0
+  },
+  "gain": [
+    {
+      "min": 1,
+      "max": 21,
+      "max_gain": 10
+    },
+    {
+      "min": 21,
+      "max": 41,
+      "max_gain": 13
+    },
+    {
+      "min": 41,
+      "max": 2147483647,
+      "max_gain": 16
+    }
+  ],
+  "multiplier": {
+    "min": 0.5,
+    "max": 1.5
+  },
+  "upgrades": {
+    "rarity": {
+      "common": {
+        "color": "192,192,192",
+        "chance": 1
+      },
+      "magic": {
+        "color": "80,107,211",
+        "chance": 0.3
+      },
+      "epic": {
+        "color": "172,30,223",
+        "chance": 0.1
+      },
+      "legendary": {
+        "color": "240,104,21",
+        "chance": 0.05
+      },
+      "unique": {
+        "color": "192, 0, 73",
+        "chance": 0.3
+      }
+    },
+    "settings": {
+      "upgrades_slots_max": 10,
+      "upgrades_choices_max": 4,
+      "upgrades_from_equipped": 0.6,
+      "upgrades_from_pool": 0.3
+    }
+  }
+}

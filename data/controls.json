@@ -1,0 +1,13 @@
+{
+  "movement": {
+    "up": "w",
+    "down": "s",
+    "left": "a",
+    "right": "d"
+  },
+  "abilities": {
+    "skill1": "j",
+    "skill2": "k",
+    "skill3": "l"
+  }
+}

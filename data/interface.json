@@ -1,0 +1,11 @@
+{
+  "player": {
+    "width": 100,
+    "scale": 4
+  },
+  "skill": {
+    "width": 50,
+    "scale": 4,
+    "slots": 3
+  }
+}

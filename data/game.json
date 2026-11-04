@@ -1,0 +1,156 @@
+{
+  "ability": {
+    "teleport": {
+      "cooldown": 0,
+      "value": 0,
+      "effect": 0,
+      "img": "./asset/img/teleport2.png",
+      "rarity": "common"
+    },
+    "run": {
+      "cooldown": 0,
+      "value": 0,
+      "effect": 0,
+      "img": "./asset/img/run2.png",
+      "rarity": "common"
+    },
+    "heal": {
+      "cooldown": 0,
+      "value": 0,
+      "effect": 0,
+      "img": "./asset/img/heal2.png",
+      "rarity": "common"
+    },
+    "placeholder": {
+      "cooldown": 0,
+      "value": 0,
+      "effect": 0,
+      "img": "./asset/img/placeholder2.png",
+      "rarity": "common"
+    }
+  },
+  "fog": {
+    "settings": {
+      "size": 2,
+      "strength": {
+        "from": 0.4,
+        "to": 1
+      },
+      "rgba": {
+        "from": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "scaling": {
+      "alpha": 0.25,
+      "red": 0,
+      "size": 5
+    }
+  },
+  "report": {
+    "weapons": {
+      "Spiral": {
+        "damage": 0,
+        "time": 0,
+        "format_duration": "",
+        "duration": 0,
+        "dps": 0
+      },
+      "Wave": {
+        "damage": 0,
+        "time": 0,
+        "format_duration": "",
+        "duration": 0,
+        "dps": 0
+      },
+      "Ricochet": {
+        "damage": 0,
+        "time": 0,
+        "format_duration": "",
+        "duration": 0,
+        "dps": 0
+      }
+    },
+    "stats": {
+      "upgrades": [],
+      "kills": 0,
+      "gold_earned": 0,
+      "time": null,
+      "time_formatted": null,
+      "level": 0,
+      "damage_taken": 0
+    }
+  },
+  "enums": {
+    "MonsterType": {
+      "Swarm": "Swarm",
+      "Archer": "Archer",
+      "Jumper": "Jumper"
+    },
+    "MonsterPattern": {
+      "Line": "Line",
+      "None": "None",
+      "Jiggly": "Jiggly"
+    },
+    "Modifier": {
+      "Area": "Area",
+      "Cooldown": "Cooldown",
+      "Damage": "Damage",
+      "Hp": "Hp",
+      "Projectiles": "Projectiles",
+      "MovementSpeed": "MovementSpeed",
+      "WeaponSpeed": "WeaponSpeed",
+      "AttackRate": "AttackRate",
+      "TrailLength": "TrailLength",
+      "Bounce": "Bounce",
+      "Orbit": "Orbit"
+    },
+    "ModifierType": {
+      "Additive": "Additive",
+      "Multiplier": "Multiplier"
+    },
+    "WeaponType": {
+      "Ricochet": "Ricochet",
+      "Spiral": "Spiral",
+      "Wave": "Wave"
+    },
+    "BulletBahviour": {
+      "Closest": "Closest",
+      "Random": "Random",
+      "Player": "Player",
+      "None": "None"
+    },
+    "UpgradeType": {
+      "Ricochet": "Ricochet",
+      "Spiral": "Spiral",
+      "Wave": "Wave",
+      "Player": "Player",
+      "Weapon": "Weapon"
+    },
+    "UpgradeRarity": {
+      "Closest": "Closest",
+      "Random": "Random",
+      "Player": "Player",
+      "None": "None"
+    },
+    "SceneList": {
+      "Menu": "Menu",
+      "Arena": "Arena"
+    },
+    "AbilityType": {
+      "Teleport": "Teleport",
+      "Run": "Run",
+      "Heal": "Heal"
+    }
+  }
+}

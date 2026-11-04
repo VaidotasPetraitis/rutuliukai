@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\decoded-web-server.props" />
-</Project>
