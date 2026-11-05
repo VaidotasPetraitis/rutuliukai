@@ -598,6 +598,7 @@ body {
 
 #shop-container {
     width: 80%;
+    height: 74vh;
     max-height: calc(84.5vh - 1rem);
     display: flex;
     flex-direction: column;
@@ -632,7 +633,7 @@ body {
 
 #shop-container-header-title {
     color: white;
-    font-size: clamp(2.75rem, 8vh, 5rem);
+    font-size: clamp(2.75rem, 9vh, 6rem);
     margin: 0;
 }
 
@@ -671,13 +672,14 @@ body {
 }
 
 #shop-container-shelf {
-    padding: 12px 20px;
+    padding: 24px clamp(24px, 3vw, 50px);
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-auto-rows: clamp(180px, 32vh, 280px);
-    gap: 10px;
+    grid-auto-rows: clamp(160px, 23vh, 250px);
+    gap: clamp(12px, 1.5vw, 28px);
     min-height: 0;
-    overflow: auto;
+    flex-shrink: 0;
+    overflow: visible;
 }
 
 .shop-container-shelf-items {
@@ -735,8 +737,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    margin: 12px;
+    gap: 20px;
+    margin: auto 20px 20px;
 }
 
 #shop-container-buttons button {
@@ -747,8 +749,8 @@ body {
     cursor: pointer;
     border: 2px solid white;
     border-radius: 10px;
-    width: min(200px, 45%);
-    height: 76px;
+    width: min(220px, 45%);
+    height: clamp(64px, 9vh, 96px);
 }
 
 #shop-container-buttons button h4 {
