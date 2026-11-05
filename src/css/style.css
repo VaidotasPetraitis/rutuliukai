@@ -598,11 +598,13 @@ body {
 
 #shop-container {
     width: 80%;
-    height: auto;
+    max-height: calc(84.5vh - 1rem);
+    display: flex;
+    flex-direction: column;
     position: absolute;
     left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    top: 4vh;
+    transform: translateX(-50%);
     background-color: rgba(27, 27, 27, 0.9);
     box-shadow: 0 0 50px black;
     border-radius: 10px;
@@ -616,12 +618,13 @@ body {
     position: relative;
     display: flex;
     justify-content: center; 
-    /* align-items: center; */
+    align-items: center;
+    flex-shrink: 0;
 }
 
 #shop-container-header-gold {
     color: #f7ba00;
-    font-size: 4em;
+    font-size: clamp(1.5rem, 4vh, 3rem);
     margin: 0;
     position: absolute;
     left: 0;
@@ -629,7 +632,7 @@ body {
 
 #shop-container-header-title {
     color: white;
-    font-size: 8em;
+    font-size: clamp(2.75rem, 8vh, 5rem);
     margin: 0;
 }
 
@@ -638,8 +641,8 @@ body {
     top: 0;
     position: absolute;
     height: 100%;
-    width: 5%;
-    font-size: 3vw;
+    width: max(44px, 5%);
+    font-size: 2rem;
     background-color: black;
     color: white;
     border: none;
@@ -664,17 +667,21 @@ body {
     text-align: center;
     font-size: 1.25rem;
     line-height: 1.3;
+    flex-shrink: 0;
 }
 
 #shop-container-shelf {
-    padding: 12px 50px 50px;
+    padding: 12px 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 300px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-rows: clamp(180px, 32vh, 280px);
+    gap: 10px;
+    min-height: 0;
+    overflow: auto;
 }
 
 .shop-container-shelf-items {
-    margin: 5%;
+    margin: 0;
     /* opacity: 0.6; */
     color: white;
     border-radius: 5px;
@@ -688,19 +695,19 @@ body {
 
 .shop-container-shelf-items h3 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0px;
     font-weight: 100;
 }
 
 .shop-container-shelf-items h5 {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin: 0px;
 }
 
 .shop-container-shelf-items h4 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #f7ba00;
     bottom: 0;
     left: 50%;
@@ -714,35 +721,34 @@ body {
 
 .shop-container-shelf-items ul {
     list-style: none;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 20px;
+    padding: 0 0.6rem;
+    margin: 0.75rem 0 2.5rem;
 }
 
 .shop-container-shelf-items ul li {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 #shop-container-buttons {
-    height: 10%;
+    flex-shrink: 0;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    margin: 25px;
+    gap: 12px;
+    margin: 12px;
 }
 
 #shop-container-buttons button {
     background-color: rgb(0, 0, 0);
-    font-size: 3em;
+    font-size: 2rem;
     color: white;
     font-family: "Jersey 10";
     cursor: pointer;
     border: 2px solid white;
     border-radius: 10px;
-    width: 250px;
-    height: 120px;
+    width: min(200px, 45%);
+    height: 76px;
 }
 
 #shop-container-buttons button h4 {
@@ -760,6 +766,7 @@ body {
 }
 
 #shop-container-buttons button p {
+    margin: 0.2rem 0 0;
     font-size: 0.6em;
     color: #f7ba00;
     font-family: "Jersey 10";
