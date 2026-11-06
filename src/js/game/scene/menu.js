@@ -34,7 +34,7 @@ export class Menu {
 
     update() {
         this.camera.draw();
-        this.monsters.draw();
+        this.monsters.draw(this.camera);
         this.monsters.movement_menu(5, 5);
         this.combat.update(this.report);
         this.frame.incrament();

@@ -33,14 +33,8 @@ export class Rectangle {
         }
     };
 
-    avoidance(monsters, is_player_moving) {
-        let max_force = 2;
-
-        if (is_player_moving) {
-            max_force = 1;
-        } else if (!is_player_moving) {
-            max_force = 2;
-        };
+    avoidance(monsters) {
+        const max_force = 2;
 
         const avoidance_distance = 16;
         let total_force = {x: 0, y: 0};

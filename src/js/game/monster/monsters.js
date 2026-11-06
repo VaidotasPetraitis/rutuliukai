@@ -90,10 +90,10 @@ export class Monsters {
         this.intervals[`interval_${type}`] = null;
     }
 
-    draw() {
+    draw(camera) {
         for (let i = 0; i < this.monsters.size(); i++) {
             const m = this.monsters.get(i);
-            m.draw({});
+            m.draw(camera);
         };
     };
 

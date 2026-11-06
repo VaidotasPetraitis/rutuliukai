@@ -13,6 +13,7 @@ export class AudioManager {
     static gainNode;
 
     static activeSources = new Set();
+    static lastHitTime = -Infinity;
 
     static startPlayback() {
         AudioManager.ctx = new AudioContext();
@@ -22,6 +23,12 @@ export class AudioManager {
     }
 
     static playAudio(audioBuffer, loop = false) {
+        if (audioBuffer === AUDIO_PRELOADED[AUDIO_TYPE.Arena].monster_hit) {
+            const now = performance.now();
+            if (now - AudioManager.lastHitTime < 50) return;
+            AudioManager.lastHitTime = now;
+        }
+
         const source = AudioManager.ctx.createBufferSource();
         source.buffer = audioBuffer;
         source.loop = loop;
@@ -42,6 +49,7 @@ export class AudioManager {
     }
 
     static stopAllAudio(exceptSource = null) {
+        AudioManager.lastHitTime = -Infinity;
         for (const source of AudioManager.activeSources) {
             if (source === exceptSource) {
                 continue;

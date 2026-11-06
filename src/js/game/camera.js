@@ -22,6 +22,32 @@ export class Camera {
         }  
     }
     
+    is_visible(rect, trail = null) {
+        const left = this.offset.x - this.scale.offset.x;
+        const top = this.offset.y - this.scale.offset.y;
+        const right = left + CANVAS_SIZE.Width / this.scale.factor;
+        const bottom = top + CANVAS_SIZE.Height / this.scale.factor;
+        let min_x = rect.location.x - 1;
+        let min_y = rect.location.y - 1;
+        let max_x = rect.location.x + rect.dimension.width + 1;
+        let max_y = rect.location.y + rect.dimension.height + 1;
+
+        if (max_x >= left && min_x <= right && max_y >= top && min_y <= bottom) return true;
+
+        if (trail) {
+            const padding = trail.width / 2 + 1;
+            for (let i = 0; i < trail.positions.length; i++) {
+                const position = trail.positions[i];
+                min_x = Math.min(min_x, position.x - padding);
+                min_y = Math.min(min_y, position.y - padding);
+                max_x = Math.max(max_x, position.x + padding);
+                max_y = Math.max(max_y, position.y + padding);
+            };
+        };
+
+        return max_x >= left && min_x <= right && max_y >= top && min_y <= bottom;
+    };
+
     draw() {
         canvas_transformation(this.offset, this.scale, {fill_style: "#1b1b1b"});
     };

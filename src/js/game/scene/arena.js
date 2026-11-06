@@ -167,8 +167,8 @@ export class Arena {
     draw() {
         this.camera.draw();
         this.player.draw();
-        this.monsters.draw();
-        this.player.weapons.draw();
+        this.monsters.draw(this.camera);
+        this.player.weapons.draw(this.camera);
         this.fog.draw(this.player);
     };
 };

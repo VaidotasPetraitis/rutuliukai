@@ -28,7 +28,8 @@ export class Jumper{
         this.on_death = new OnDeath({...DATA.on_death});
     };
 
-    draw() {
+    draw(camera) {
+        if (!camera.is_visible(this.rect)) return;
         canvas_filled_circle(this.rect.location, this.rect.dimension, {fill_style: DATA.color.body, hp: this.sheet.get_specific_health_fields()});
     };
     

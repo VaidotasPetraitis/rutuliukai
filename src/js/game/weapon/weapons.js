@@ -55,10 +55,10 @@ export class Weapons {
         return this.weapons;
     }
 
-    draw() {
+    draw(camera) {
         for (let i = 0; i < this.weapons.size(); i++) {
             const weapon = this.weapons.get(i);
-            weapon.matrix.draw();
+            weapon.matrix.draw(camera);
         };
     };
 

@@ -27,9 +27,11 @@ export class Archer{
         this.on_death = new OnDeath({...DATA.on_death});    
     };
 
-    draw() {
-        canvas_filled_circle(this.rect.location, this.rect.dimension, {fill_style: DATA.color.body, hp: this.sheet.get_specific_health_fields()});
-        this.strategy.weapon.matrix.draw();
+    draw(camera) {
+        if (camera.is_visible(this.rect)) {
+            canvas_filled_circle(this.rect.location, this.rect.dimension, {fill_style: DATA.color.body, hp: this.sheet.get_specific_health_fields()});
+        };
+        this.strategy.weapon.matrix.draw(camera);
     };
     
     update(player) {

@@ -28,9 +28,10 @@ export class Matrix {
         this.bullets.push(bullet);
     };
 
-    draw() {
+    draw(camera) {
         for (let i = 0; i < this.bullets.length; i++) {
             const b = this.bullets[i];
+            if (!camera.is_visible(b.rect, b.trail)) continue;
             b.rect.draw({fill_style: b.color, filled: true, circle: true });
             b.trail.draw();
         };

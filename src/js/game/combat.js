@@ -13,7 +13,7 @@ export class Combat {
 
     update(){
         grid_insert_monsters(this.monsters, this.grid);
-        monsters_avoidance(this.monsters, this.grid, this.player);
+        monsters_avoidance(this.monsters, this.grid);
         monsters_attack(this.grid, this.player, this.report);
         player_attack(this.grid, this.player, this.report);
         this.grid.clear();
@@ -28,12 +28,12 @@ function grid_insert_monsters(monsters_collection, grid) {
     };
 };
 
-function monsters_avoidance(monsters_collection, grid, player) {
+function monsters_avoidance(monsters_collection, grid) {
     const monsters = monsters_collection.get_all();
     for (let i = 0; i < monsters.size(); i++) {
         const m = monsters.get(i);
         const monsters_near_m = grid.nearby_grids(m, 1);
-        m.rect.avoidance(monsters_near_m, player.keybind.is_player_moving());
+        m.rect.avoidance(monsters_near_m);
     };
 };
 
